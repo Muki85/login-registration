@@ -67,6 +67,7 @@ class Validate {
 		public function passed() {
 			return $this->_passed;
 		}
-	}
+	} 
+	
 	
 
