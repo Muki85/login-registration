@@ -1,12 +1,8 @@
 <?php
 require_once 'ooplr/core/init.php';
 
-$user = DB::getInstance()->query("SELECT * FROM users");
+$user = DB::getInstance()->update('users', 3, array(
+	'password' => 'newpassword',
+	'name' => 'dale garrent'
+));
 
-if(!$user->count()){
-	echo 'no user';
-} else {
-	foreach($user->results() as $user){
-		echo $user->username,'<br>';
-	}
-}
