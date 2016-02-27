@@ -41,9 +41,10 @@ if(Input::exists()) {
 					'group1' => 1
 					
 				));
-				
+				echo 'You have registered Successfuly, you can now <a href="login.php">log in</a>';
+				echo "<br>";
+
 				Session::flash('home', 'You have been registered and can now log in!');
-				Redirect::to('index.php');
 				
 			} catch(Exception $e) {
 				die($e->getMessage());
