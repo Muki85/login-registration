@@ -1,5 +1,11 @@
 <?php
 require_once 'ooplr/core/init.php';
+
+$user = new User();
+if(!$user->isLoggedIn()) {
+	Redirect::to('login.php');
+}
+
 ?>
 
 <html>
@@ -46,10 +52,7 @@ require_once 'ooplr/core/init.php';
 </div>
 <div class="content">
 	Hello <?php 
-	$user = new User();
-	if($user->isLoggedIn()){
 	echo escape($user->data()->username); 
-	}
 	?>
 </div>
 </html>

@@ -14,7 +14,7 @@ if(Input::exists()){
 			$user = new User();
 			$login = $user->login(Input::get('username'), Input::get('password'));
 			
-			if($login) {
+			if($login) {				
 				Redirect::to('bo.php');
 			} else {
 				echo '<p>Sorry, logging in faild!</p>';
@@ -35,7 +35,7 @@ if(Input::exists()){
 <form action="" method="post">
 	<div class="field">
 		<label for="username">Username</label>
-		<input type="text" name="username" id="username" autocomplete="off">
+		<input type="text" name="username" id="username">
 	</div>
 	
 	<div class="field">
