@@ -58,28 +58,49 @@ if(Input::exists()) {
 }
 ?>
 
-<form action="" method="post">
-	<div class"field">
-		<label for="username">Username</label>
-		<input type="text" name="username" id="username" value="<?php echo escape(Input::get('username')); ?>" autocomplete="off">
-	</div>
-	
-	<div class="field">
-		<label for="password">Password</label>
-		<input type="password" name="password" id="password">
-	</div>
-	
-	<div class="field">
-		<label for="password_again">Enter your password again</label>
-		<input type="password" name="password_again" id="password_again">
-	</div>
+<html>
+<head>
+        
+        <title>Register</title>
+        
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
+    </head>
 
-	<div class="field">
-		<label for="name">Name</label>
-		<input type="text" name="name" value="<?php echo escape(Input::get('name')); ?>" id="name">
-	</div>
-	
-	<input type="hidden" name="token" value="<?php echo Token::generate();?>">
-	
-	<input type="submit" value="Register">
+
+<div id="container_demo" >
+	<a class="hiddenanchor" id="toregister"></a>
+	<a class="hiddenanchor" id="tologin"></a>
+
+	<div id="wrapper">
+		<div id="login" class="animate form">
+			<form  action="" method="post"> 
+				<h1>Register</h1> 
+				<p> 
+					<label for="username" class="uname" data-icon="u" > Your username </label>
+					<input name="username" id="username" required="required" type="text" placeholder=""/>
+				</p>
+
+				<p> 
+					<label for="password" class="youpasswd" data-icon="p"> Your password </label>
+					<input name="password" id="password" required="required" type="password" placeholder="" /> 
+				</p>
+
+                                <p> 
+					<label for="password" class="youpasswd" data-icon="p"> Enter your password again </label>
+					<input name="password_again" id="password_again" required="required" type="password" placeholder="" /> 
+				</p>
+
+                                <p> 
+					<label for="password" class="youpasswd" data-icon="n"> Name </label>
+					<input name="name" value="<?php echo escape(Input::get('name')); ?>" id="name" required="required" type="password" placeholder="" /> 
+				</p>
+				
+                              
+				<p class="login button"> 
+                                        <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
+					<input type="submit" value="Register" /> 
+				</p>
 </form>
+</div>
+</html>
