@@ -78,22 +78,22 @@ if(Input::exists()) {
 				<h1>Register</h1> 
 				<p> 
 					<label for="username" class="uname" data-icon="u" > Your username </label>
-					<input name="username" id="username" required="required" type="text" placeholder=""/>
+					<input name="username" id="username" required="required" type="text" />
 				</p>
 
 				<p> 
 					<label for="password" class="youpasswd" data-icon="p"> Your password </label>
-					<input name="password" id="password" required="required" type="password" placeholder="" /> 
+					<input name="password" id="password" required="required" type="password" /> 
 				</p>
 
                                 <p> 
 					<label for="password" class="youpasswd" data-icon="p"> Enter your password again </label>
-					<input name="password_again" id="password_again" required="required" type="password" placeholder="" /> 
+					<input name="password_again" id="password_again" required="required" type="password" /> 
 				</p>
 
                                 <p> 
 					<label for="password" class="youpasswd" data-icon="n"> Name </label>
-					<input name="name" value="<?php echo escape(Input::get('name')); ?>" id="name" required="required" type="password" placeholder="" /> 
+					<input name="name" value="<?php echo escape(Input::get('name')); ?>" id="name" type="text" /> 
 				</p>
 				
                               

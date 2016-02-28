@@ -65,6 +65,9 @@ if(Input::exists()){
                                         <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
 					<input type="submit" value="Login" /> 
 				</p>
+				<p> 
+					If you are not registered, go and <a href="register1.php">Register Here..</a> 
+				</p>
 </form>
 </div>
 </html>
