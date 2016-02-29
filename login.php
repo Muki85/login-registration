@@ -17,7 +17,13 @@ if(Input::exists()){
 			if($login) {				
 				Redirect::to('bo.php');
 			} else {
-				echo '<p>Sorry, logging in faild!</p>';
+				echo '<html>
+                      <head><link rel="stylesheet" type="text/css" href="css/style.css" />
+		              <link rel="stylesheet" type="text/css" href="css/animate-custom.css" /></head>
+                      <div class="login">
+                      <h2 style="color:rgb(61, 157, 179);"><center>Sorry, logging in faild. Try again..</center></h2>
+					  </div> 
+					  </html>';
 				
 			}
 			
@@ -49,9 +55,9 @@ if(Input::exists()){
 	<div id="wrapper">
 		<div id="login" class="animate form">
 			<form  action="" method="post"> 
-				<h1>Log in</h1> 
+				<h1>Log In</h1> 
 				<p> 
-					<label for="username" class="uname" data-icon="u" > Your email or username </label>
+					<label for="username" class="uname" data-icon="u" > Your username </label>
 					<input id="text" name="username" id="username" required="required" type="text" placeholder=""/>
 				</p>
 
@@ -66,7 +72,7 @@ if(Input::exists()){
 					<input type="submit" value="Login" /> 
 				</p>
 				<p> 
-					If you are not registered, go and <a href="register1.php">Register Here..</a> 
+					If you are not registered, go and <a href="register.php">Register Here..</a> 
 				</p>
 </form>
 </div>

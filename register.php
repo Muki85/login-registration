@@ -41,8 +41,13 @@ if(Input::exists()) {
 					'group1' => 1
 					
 				));
-				echo 'You have registered Successfuly, you can now <a href="login.php">log in</a>';
-				echo "<br>";
+				echo '<html>
+                      <head><link rel="stylesheet" type="text/css" href="css/style.css" />
+		              <link rel="stylesheet" type="text/css" href="css/animate-custom.css" /></head>
+                      <div class="login">
+                      <h2 style="color:rgb(61, 157, 179);"><center>You have registered successfuly, you can now <a href="login.php">log in</a></center></h2
+                       </div>
+                       </html>';
 
 				Session::flash('home', 'You have been registered and can now log in!');
 				
@@ -93,14 +98,18 @@ if(Input::exists()) {
 
                                 <p> 
 					<label for="password" class="youpasswd" data-icon="n"> Name </label>
-					<input name="name" value="<?php echo escape(Input::get('name')); ?>" id="name" type="text" /> 
+					<input name="name" value="<?php echo escape(Input::get('name')); ?>" required="required" id="name" type="text" /> 
 				</p>
 				
                               
 				<p class="login button"> 
-                                        <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
+                    <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
 					<input type="submit" value="Register" /> 
 				</p>
+				
+				 <p> 
+					If you are already registered, go and <a href="login.php">Log In Here..</a> 
+			     </p>
 </form>
 </div>
 </html>
